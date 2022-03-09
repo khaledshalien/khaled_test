@@ -1,0 +1,25 @@
+class UserModel {
+  String name;
+  String email;
+  String password;
+  String phone;
+   int id;
+
+  UserModel({
+     this.id,
+     this.name,
+     this.email,
+     this.password,
+     this.phone,
+  });
+
+  factory UserModel.fromJson(json){
+    return UserModel(
+      name: json['full_name'].toString(),
+      email: json['email'].toString(),
+      password: json['password'].toString(),
+      phone:json['phone'].toString(),
+      id: json['user_id'],
+    );
+  }
+}

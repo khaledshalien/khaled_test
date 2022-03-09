@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+
+
+class MyText extends StatelessWidget {
+  String text;
+  Color color;
+  FontWeight fontWeight;
+  double fontsize;
+
+
+  MyText({
+     this.text,
+     this.color,
+     this.fontWeight,
+     this.fontsize,
+
+  });
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+        text,
+        style: TextStyle(
+        fontSize: fontsize,
+        fontWeight: fontWeight,
+        color: color
+        )
+    );
+  }
+}
